@@ -1,1 +1,110 @@
-/* You can add global styles to this file, and also import other style files */
+body {background-color: white; margin: 20px}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {  -webkit-appearance: none;  margin: 0; }
+  
+table th {background-color: green; font-weight:bold; color:#fff; font-size: 120%;}
+
+table tr td:nth-child(n+2):nth-child(-n+3) {font-weight:bold;}
+
+.hidden{display:none;}
+
+.gradGreen{background: linear-gradient(to bottom right, green, rgb(22, 179, 22));}
+
+.playertable{border-collapse: collapse;}
+
+.playertable td:nth-child(n+4):nth-child(-n+13) {text-align: center;}
+
+.playertable tr:nth-child(odd) td:nth-child(n+1):nth-child(-n+2) {visibility: hidden;}
+
+.playertable tr:nth-child(odd){border-bottom: solid; border-width: 2px; border-color:green;}
+
+.header{font-size: 6rem; letter-spacing:40px;}
+
+.subheader {font-weight: bolder;color:#fff;  font-size:1rem; letter-spacing: .3em; text-align: center}
+
+.matchmember td {font-weight:normal;}
+
+.leagueRow{ min-width:380px; width:100%;}
+
+.colPoints {  background-color: white;}
+
+.colTeam {background-color: white;}
+
+.colPlayer { min-width: 150px;  background-color: white;}
+
+.colNumber { background-color: white;}
+
+.matchcardheading th {background-color: darkblue;}
+
+.digitHolder { width:25px; }
+
+.strokAdvOne {background-color: #ddd;}
+
+.strokAdvZero {background-color:white}
+
+.float { float: left;}
+
+.scheduledates{ font-size: 120%; padding: 8px 24px 12px 10px; margin:0px 0px 10px 0px; background-color: rgb(223, 223, 230)}
+
+.listpage {margin-top: 30px; margin-left: 15%;margin-right: 15%; }
+
+.matchcardpage{margin-left: 15%;margin-right: 15%; background-color: white;}
+
+.matchcardcompletepage{margin-left: 2px;margin-right: 2px; background-color: white;}
+.matchcardcompletepage td  {padding:2px;}
+
+.box>.vs{ font-weight: normal; font-size: 80%;}
+
+.wrapper { display: grid;grid-template-columns: 110px 110px 110px;grid-gap: 10px;  background-color: #fff; }
+
+.box { background-color:midnightblue; color: #fff; padding: 10px; font-size: 120%; text-align: center; font-weight:bold; cursor: pointer;}
+
+.holewon {border-color: red; border-width: 2px;}
+
+  @media screen and (max-width: 992px) {
+    /* iphone landscape */
+   body {background-color:rgb(212, 205, 228); margin:5px;}
+   /* .mainheader {font-weight: bolder;  font-size: 200%; text-align: center; padding: 0px; margin: -10px;} */
+   .header{font-size: 4rem; letter-spacing:40px;}
+   .subheader { font-weight: bolder;color:#fff;  font-size:.8rem; letter-spacing: .3em; text-align: center}
+   .nav-item {font-size:.8rem; margin-top: 20px; line-height: .3rem}
+   .table td {padding: .25rem;}
+   .table th { font-size: 80%; font-weight: bold; padding: .25rem; }
+   table th { font-size: 80%;}
+   .scheduledates{ font-size: 80%; padding: 3px 10px 4px 5px; margin:0px 0px 1px 0px;}
+   .box { background-color: midnightblue; padding: 2px; font-size: 90%;}
+   .wrapper { grid-template-columns: 80px 80px 80px;grid-gap: 2px; }
+   .listpage{ padding-left: 2px; margin-top: 5px;}
+   .matchcardpage{margin-left: 1px;margin-right: 1px; background-color: white;}
+   .digitHolder { width:20px; height: 20px;}
+   .matchmember {font-weight:normal; font-size: 100%;}
+ }
+ 
+ /* On screens that are 600px or less, set the background color to olive */
+ @media screen and (max-width: 600px) {
+    /* iphone portrait */
+   body { background-color:rgb(117, 113, 113); margin:5px;} 
+   .mainheader {font-weight: bolder;  font-size: 200%; text-align: center; padding: 0px; margin: -10px;}
+   .table td {padding: .25rem;}
+   .table th { font-size: 60%; font-weight: normal; padding: .25rem; }
+   .scheduledates{ font-size: 60%; padding: 3px 10px 4px 5px; margin:0px 0px 1px 0px;}
+   .box { background-color: midnightblue; padding: 2px; font-size: 90%;}
+   .wrapper { grid-template-columns: 80px 80px 80px;grid-gap: 2px; }
+   .weekNumbers {display: none;} 
+   .listpage{ padding-left: 2px; margin-top: 5px;}
+   .matchcardpage{margin-left: 1px;margin-right: 1px; background-color: white;}
+   .digitHolder { width:15px; height: 15px;}
+   .matchmember  {font-weight:normal; font-size: 60%;}
+ }
+
+
+   /* .box:nth-child(n+4):nth-child(-n+6) { background: rgba(39, 41, 146, 0.692);}
+  .box:nth-child(n+10):nth-child(-n+12) { background: rgba(39, 41, 146, 0.692);}
+  .box:nth-child(n+16):nth-child(-n+18) { background: rgba(39, 41, 146, 0.692);}
+  .box:nth-child(n+22):nth-child(-n+24) { background: rgba(39, 41, 146, 0.692);}
+  .box:nth-child(n+28):nth-child(-n+30) { background: rgba(39, 41, 146, 0.692);}
+  .box:nth-child(n+34):nth-child(-n+36) { background: rgba(39, 41, 146, 0.692);}
+  .box:nth-child(n+40):nth-child(-n+42) { background: rgba(39, 41, 146, 0.692);}
+  .box:nth-child(n+46):nth-child(-n+48) { background: rgba(39, 41, 146, 0.692);}
+  .box:nth-child(n+52):nth-child(-n+54) { background: rgba(39, 41, 146, 0.692);}
+  .box:nth-child(n+58):nth-child(-n+60) { background: rgba(39, 41, 146, 0.692);} */

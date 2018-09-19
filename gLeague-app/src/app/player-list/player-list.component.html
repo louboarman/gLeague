@@ -1,3 +1,4 @@
+
 <div class="table-responsive">
   <table class="table playertable">
     <tr>
@@ -5,7 +6,7 @@
       <th>Email</th>
       <th>Role</th>
     </tr>
-    <tr *ngFor="let player of players">
+    <tr *ngFor="let player of leagueplayers">
       <td>{{player.name}}</td>
       <td>{{player.email}}</td>
       <td>{{player.role | role}}</td>

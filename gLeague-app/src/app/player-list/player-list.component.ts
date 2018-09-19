@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Player } from '../player';
+import { PlayerService } from '../player.service';
 @Component({
   selector: 'app-player-list',
   templateUrl: './player-list.component.html',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerListComponent implements OnInit {
 
-  constructor() { }
+  private leagueplayers;
+  players: Player[];
+
+  constructor(private PlaySvc: PlayerService) { }
+
 
   ngOnInit() {
+     this.PlaySvc.getPlayers().subscribe(
+       (data) => this.leagueplayers = data
+     );
   }
 
 }

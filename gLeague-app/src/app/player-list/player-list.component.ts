@@ -6,18 +6,15 @@ import { PlayerService } from '../player.service';
   templateUrl: './player-list.component.html',
   styleUrls: ['./player-list.component.css']
 })
-export class PlayerListComponent implements OnInit {
+export class PlayerListComponent {
 
   private leagueplayers;
   players: Player[];
 
-  constructor(private PlaySvc: PlayerService) { }
-
-
-  ngOnInit() {
-     this.PlaySvc.getPlayers().subscribe(
-       (data) => this.leagueplayers = data
-     );
+  constructor(PlaySvc: PlayerService) { 
+    PlaySvc.getPlayers().subscribe(
+      (data) => this.leagueplayers = data
+    );
   }
 
 }

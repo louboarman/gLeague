@@ -8,13 +8,14 @@ import { PlayerService } from '../player.service';
 })
 export class PlayerListComponent {
 
-  private leagueplayers;
+  //private leagueplayers;
   players: Player[];
 
   constructor(PlaySvc: PlayerService) { 
-    PlaySvc.getPlayers().subscribe(
-      (data) => this.leagueplayers = data
-    );
+    // PlaySvc.getPlayers().subscribe(
+    //   (data) => this.leagueplayers = data
+    // );
+    this.players = PlaySvc.getPlayers();
   }
 
 }

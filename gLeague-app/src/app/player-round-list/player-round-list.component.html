@@ -1,0 +1,18 @@
+<div class="table-responsive">
+  <table class="">
+    <tr>
+      <th>PlayerID</th>
+      <th>Date</th>
+      <th>Score</th>
+      <th>Putts</th>
+    </tr>
+    <tr *ngFor="let round of rounds | filterBy: filter">
+      <td>{{round.playerid}}</td>
+      <td>{{round.dateplayed | date}}</td>
+      <td>{{round.score}}</td>
+      <td>{{round.putts}}</td>
+    </tr>
+  </table>
+</div>
+
+

@@ -14,7 +14,7 @@ table tr td:nth-child(n+2):nth-child(-n+3) {font-weight:bold;}
 
 .playertable td:nth-child(n+4):nth-child(-n+13) {text-align: center;}
 
-.playertable tr:nth-child(odd) td:nth-child(n+1):nth-child(-n+2) {visibility: hidden;}
+/* .playertable tr:nth-child(odd) td:nth-child(n+1):nth-child(-n+2) {visibility: hidden;} */
 
 .playertable tr:nth-child(odd){border-bottom: solid; border-width: 2px; border-color:green;}
 

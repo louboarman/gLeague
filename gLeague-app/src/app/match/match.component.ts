@@ -14,20 +14,20 @@ export class MatchComponent {
   rounds: any[];
   holescores: any[];
   
-  match: Match = {id:1, teamOne: 1, teamTwo: 2, playerT1P1RoundId:1, playerT1P2RoundId:5, playerT2P1RoundId:3,playerT2P2RoundId:7, dateplayed: new Date('4-30-2018'), completed:true};
+  match: Match = {id:1, teamOne: 1, teamTwo: 2, playerT1P1RoundId:1, playerT1P2RoundId:3, playerT2P1RoundId:5,playerT2P2RoundId:7, dateplayed: new Date('4-30-2018'), completed:true};
   
   
-  playerFilterT1P1: any = { id: 1 };
-  roundFilterT1P1: any = { roundid: 1 };
+  playerFilterT1P1: any = { id: this.match.playerT1P1RoundId };
+  roundFilterT1P1: any = { roundid: this.match.playerT1P1RoundId };
 
-  playerFilterT2P1: any = { id: 5 };
-  roundFilterT2P1: any = { roundid: 5 };
+  playerFilterT2P1: any = { id: this.match.playerT2P1RoundId };
+  roundFilterT2P1: any = { roundid: this.match.playerT2P1RoundId };
 
-  playerFilterT1P2: any = { id: 3 };
-  roundFilterT1P2: any = { roundid: 3 };
+  playerFilterT1P2: any = { id: this.match.playerT1P2RoundId };
+  roundFilterT1P2: any = { roundid: this.match.playerT1P2RoundId };
 
-  playerFilterT2P2: any = { id: 7 };
-  roundFilterT2P2: any = { roundid: 7 };
+  playerFilterT2P2: any = { id: this.match.playerT2P2RoundId };
+  roundFilterT2P2: any = { roundid: this.match.playerT2P2RoundId };
 
  
   constructor(RoundSvc: RoundService, HoleSvc: HoleScoreService, private filterPipe: FilterPipe) { 

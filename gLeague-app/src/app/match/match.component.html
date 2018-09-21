@@ -1,0 +1,38 @@
+<!-- <input type="text" [(ngModel)]="playerFilter.id" placeholder="Type to filter by ids" value="1">
+<input type="text" [(ngModel)]="roundFilter.roundid" placeholder="Type to rounds filter by ids" value="1"> -->
+<br />
+
+<div style="float:left;width: 70px;text-align:center">ID</div>
+<div style="float:left;width: 90px;text-align:center">Player</div>
+<div *ngFor="let holescore of holescores | filterBy: roundFilterT1P1">
+  <div style="float:left;width: 70px;text-align:center">H:{{holescore.holeid}}</div>
+</div>
+<br />
+<div *ngFor="let round of rounds | filterBy: playerFilterT1P1">
+    <div style="float:left;width: 70px;text-align:center">{{round.id}}</div><div style="float:left;width: 90px;text-align:center">{{round.playername}}</div>
+  </div>
+<div *ngFor="let holescore of holescores | filterBy: roundFilterT1P1">
+    <div style="float:left; width: 70px;text-align:center">{{holescore.strokes}}</div>
+</div>
+<br />
+<div *ngFor="let round of rounds | filterBy: playerFilterT2P1">
+  <div style="float:left;width: 70px;text-align:center">{{round.id}}</div><div style="float:left;width: 90px;text-align:center">{{round.playername}}</div>
+</div>
+<div *ngFor="let holescore of holescores | filterBy: roundFilterT2P1">
+  <div style="float:left; width: 70px;text-align:center">{{holescore.strokes}}</div>
+</div>
+<br />
+<br />
+<div *ngFor="let round of rounds | filterBy: playerFilterT1P2">
+  <div style="float:left;width: 70px;text-align:center">{{round.id}}</div><div style="float:left;width: 90px;text-align:center">{{round.playername}}</div>
+</div>
+<div *ngFor="let holescore of holescores | filterBy: roundFilterT1P2">
+  <div style="float:left; width: 70px;text-align:center">{{holescore.strokes}}</div>
+</div>
+<br />
+<div *ngFor="let round of rounds | filterBy: playerFilterT2P2">
+<div style="float:left;width: 70px;text-align:center">{{round.id}}</div><div style="float:left;width: 90px;text-align:center">{{round.playername}}</div>
+</div>
+<div *ngFor="let holescore of holescores | filterBy: roundFilterT2P2">
+<div style="float:left; width: 70px;text-align:center">{{holescore.strokes}}</div>
+</div>

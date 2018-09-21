@@ -18,6 +18,7 @@ import { RoundService } from './round.service';
 import { RolePipe } from './role.pipe';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { TestFilterComponent } from './test-filter/test-filter.component';
+import { MatchComponent } from './match/match.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { TestFilterComponent } from './test-filter/test-filter.component';
     PlayerListComponent,
     RolePipe,
     PlayerRoundListComponent,
-    TestFilterComponent
+    TestFilterComponent,
+    MatchComponent
   ],
   imports: [
     BrowserModule,

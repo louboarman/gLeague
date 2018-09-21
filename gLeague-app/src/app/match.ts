@@ -3,10 +3,11 @@ export class Match {
     dateplayed: Date;
     teamOne: number;
     teamTwo: number;
-    constructor(id:number, dateplayed: Date, teamOne: number, teamTwo: number){
-        this.id = id;
-        this.dateplayed = dateplayed;
-        this.teamOne = teamOne;
-        this.teamTwo = teamTwo;
-    }
+    playerT1P1RoundId: number;
+    playerT1P2RoundId: number;
+    playerT2P1RoundId: number;
+    playerT2P2RoundId: number;
+    completed: boolean;
+    constructor(){}
+
 }

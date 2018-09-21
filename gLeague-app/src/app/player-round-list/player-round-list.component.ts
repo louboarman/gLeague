@@ -12,10 +12,12 @@ import { FilterPipe } from 'ngx-filter-pipe';
 export class PlayerRoundListComponent {
   rounds: any[];
   holescores: any[];
+  
   playerid = 1;
-  playerFilter: any = { playerid: '' };
+  playerFilter: any = { playerid: 1 };
+
   roundid = 1;
-  roundFilter: any = { roundid: '' };
+  roundFilter: any = { roundid: 1 };
 
   constructor(RoundSvc: RoundService, HoleSvc: HoleScoreService, private filterPipe: FilterPipe) { 
     this.rounds =RoundSvc.getRounds();

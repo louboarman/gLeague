@@ -1,3 +1,5 @@
+import { HOLES } from "./mock-holes";
+
 export class HoleScore {
     roundid: number;
     holeid: number;
@@ -25,5 +27,5 @@ export class HoleScore {
         this.gir = gir;
         this.parsave = parsave;
     }
-
+ 
 }

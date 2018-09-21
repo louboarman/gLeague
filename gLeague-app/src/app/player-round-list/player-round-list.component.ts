@@ -1,10 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Round } from '../round';
-import { Player } from '../player';
+import { Component} from '@angular/core';
 import { RoundService } from '../round.service';
+import { HoleScoreService } from '../hole-score.service';
 import { FilterPipe } from 'ngx-filter-pipe';
-
-const filter = {$or: 1};
 
 @Component({
   selector: 'app-player-round-list',
@@ -13,15 +10,16 @@ const filter = {$or: 1};
 })
 
 export class PlayerRoundListComponent {
+  rounds: any[];
+  holescores: any[];
+  playerid = 1;
+  playerFilter: any = { playerid: '' };
+  roundid = 1;
+  roundFilter: any = { roundid: '' };
 
-  rounds: Round[];
-  userFilter: any = { playerid: 0 };
-
-  constructor(RoundSvc: RoundService, private filterPipe: FilterPipe) { 
-    // PlaySvc.getPlayers().subscribe(
-    //   (data) => this.leagueplayers = data
-    // );
-    this.rounds = filterPipe.transform(RoundSvc.getRounds(), {playerid: 2});
+  constructor(RoundSvc: RoundService, HoleSvc: HoleScoreService, private filterPipe: FilterPipe) { 
+    this.rounds =RoundSvc.getRounds();
+    this.holescores = HoleSvc.getHoleScoresForRound();
   }
 
 }

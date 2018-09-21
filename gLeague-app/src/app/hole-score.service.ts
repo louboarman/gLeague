@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders, HttpResponse } from '@angular/common/http';
-import { ROUNDS } from './mock-rounds';
+import { HOLESCORES } from './mock-hole-scores';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RoundService {
+export class HoleScoreService {
 
   constructor(private http: HttpClient) { }
-
-  getRounds(){
-    return ROUNDS;
+  
+  getHoleScoresForRound(){
+    return HOLESCORES; 
   }
 
-  
 }

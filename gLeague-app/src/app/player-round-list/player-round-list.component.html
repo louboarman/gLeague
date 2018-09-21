@@ -1,18 +1,19 @@
+<input type="text" [(ngModel)]="playerFilter.id" placeholder="Type to filter by id">
 <div class="table-responsive">
-  <table class="">
-    <tr>
-      <th>PlayerID</th>
-      <th>Date</th>
-      <th>Score</th>
-      <th>Putts</th>
-    </tr>
-    <tr *ngFor="let round of rounds | filterBy: filter">
-      <td>{{round.playerid}}</td>
-      <td>{{round.dateplayed | date}}</td>
-      <td>{{round.score}}</td>
-      <td>{{round.putts}}</td>
-    </tr>
-  </table>
+<input type="text" [(ngModel)]="roundFilter.roundid" placeholder="Type to rounds filter by id">
+<br />
+
+<div style="float:left;width: 40px;text-align:center">ID</div>
+<div style="float:left;width: 60px;text-align:center">Player</div>
+<div *ngFor="let holescore of holescores | filterBy: roundFilter">
+  <div style="float:left;width: 40px;text-align:center">H:{{holescore.holeid}}</div>
+</div>
+<br />
+<div *ngFor="let round of rounds | filterBy: playerFilter">
+    <div style="float:left;width: 40px;text-align:center">{{round.id}}</div><div style="float:left;width: 60px;text-align:center">{{round.playername}}</div>
+  </div>
+<div *ngFor="let holescore of holescores | filterBy: roundFilter">
+    <div style="float:left; width: 40px;text-align:center">{{holescore.strokes}}</div>
 </div>
 
 

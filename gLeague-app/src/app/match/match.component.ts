@@ -35,4 +35,8 @@ export class MatchComponent {
     this.holescores = HoleSvc.getHoleScoresForRound();
   }
 
+  getPlayerAdvantage(playerRoundId:number, OpponentRoundId:number, holeNumber: number){
+    return 3;
+  }
+
 }

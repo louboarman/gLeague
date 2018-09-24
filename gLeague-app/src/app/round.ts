@@ -8,6 +8,7 @@ export class Round {
     dateplayed: Date;
     courseid: number;
     teeid: number;
+    matchhdcp: number;
     nine: number;
     score: number;
     netscore: number;

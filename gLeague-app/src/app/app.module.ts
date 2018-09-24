@@ -19,6 +19,7 @@ import { RolePipe } from './role.pipe';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { TestFilterComponent } from './test-filter/test-filter.component';
 import { MatchComponent } from './match/match.component';
+import { StrokeadvantagePipe } from './strokeadvantage.pipe';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { MatchComponent } from './match/match.component';
     RolePipe,
     PlayerRoundListComponent,
     TestFilterComponent,
-    MatchComponent
+    MatchComponent,
+    StrokeadvantagePipe
   ],
   imports: [
     BrowserModule,

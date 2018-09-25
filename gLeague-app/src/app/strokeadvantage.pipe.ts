@@ -5,11 +5,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class StrokeadvantagePipe implements PipeTransform {
 
-  transform(value: number, args1: number, args2: number): string {
-    return this.getPlayerAdvantage(value, args1, args2)
+  transform(value: number, args1: number): string {
+    return this.getPlayerAdvantage(value, args1)
   }
 
-  getPlayerAdvantage(playerRoundId:number, OpponentRoundId:number, holeNumber: number){
+  getPlayerAdvantage(holeNumber: number, playerRoundId:number){
     if (playerRoundId==3){
       return "holewon";
      } 

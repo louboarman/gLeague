@@ -6,6 +6,29 @@ table th {background-color: green; font-weight:bold; color:#fff; font-size: 120%
 
 table tr td:nth-child(n+2):nth-child(-n+3) {font-weight:bold;}
 
+.holeAdv {background-color: lightgray}
+
+.matchcarddiv {float:left;width: 30px;text-align:center;}
+
+.matchcarddivMedium {float:left;width: 60px;text-align:left;}
+
+.matchcarddivWide {float:left;width: 130px;text-align:left;}
+
+.matchcarddivSpace {float:left;width: 10px;}
+
+.matchcarddivheader {float:left;width: 30px;text-align:center; font-weight: bold}
+
+.matchcarddivheaderMedium {float:left;width: 60px;text-align:left; font-weight: bold}
+
+.matchcarddivheaderWide {float:left;width: 130px;text-align:left; font-weight: bold}
+
+
+
+
+
+
+
+
 .hidden{display:none;}
 
 .gradGreen{background: linear-gradient(to bottom right, green, rgb(22, 179, 22));}
@@ -59,7 +82,7 @@ table tr td:nth-child(n+2):nth-child(-n+3) {font-weight:bold;}
 
 .box { background-color:midnightblue; color: #fff; padding: 10px; font-size: 120%; text-align: center; font-weight:bold; cursor: pointer;}
 
-.holeAdv {border-color: red; border-width: 2px; background-color: cadetblue;}
+
 
   @media screen and (max-width: 992px) {
     /* iphone landscape */

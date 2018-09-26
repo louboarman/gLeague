@@ -20,6 +20,7 @@ import { FilterPipeModule } from 'ngx-filter-pipe';
 import { TestFilterComponent } from './test-filter/test-filter.component';
 import { MatchComponent } from './match/match.component';
 import { StrokeadvantagePipe } from './strokeadvantage.pipe';
+import { HolewonPipe } from './holewon.pipe';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { StrokeadvantagePipe } from './strokeadvantage.pipe';
     PlayerRoundListComponent,
     TestFilterComponent,
     MatchComponent,
-    StrokeadvantagePipe
+    StrokeadvantagePipe,
+    HolewonPipe
   ],
   imports: [
     BrowserModule,

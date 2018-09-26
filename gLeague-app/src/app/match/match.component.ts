@@ -3,8 +3,7 @@ import { RoundService } from '../round.service';
 import { HoleScoreService } from '../hole-score.service';
 import { FilterPipe } from 'ngx-filter-pipe';
 import { Match } from '../match';
-import { Round } from '../round';
-import { StatService } from '../stat.service';
+import { HoleService } from '../hole.service';
 
 @Component({
   selector: 'app-match',
@@ -35,9 +34,9 @@ export class MatchComponent {
   playerFilterT2P2: any = { id: this.match.playerT2P2RoundId };
   roundFilterT2P2: any = { roundid: this.match.playerT2P2RoundId };
 
-  constructor(RoundSvc: RoundService, HoleSvc: HoleScoreService, StatSvc: StatService, private filterPipe: FilterPipe) { 
+  constructor(RoundSvc: RoundService, HoleScoreSvc: HoleScoreService, private filterPipe: FilterPipe) { 
     this.rounds =RoundSvc.getRounds();
-    this.holescores = HoleSvc.getHoleScoresForRound();
+    this.holescores = HoleScoreSvc.getHoleScoresForRound();
     this.player1T1Advantage = RoundSvc.getPlayerAdvantageForMatch(this.match.playerT1P1RoundId, this.match.playerT2P1RoundId);
     this.player1T2Advantage = RoundSvc.getPlayerAdvantageForMatch(this.match.playerT2P1RoundId, this.match.playerT1P1RoundId);
     this.player2T1Advantage = RoundSvc.getPlayerAdvantageForMatch(this.match.playerT1P2RoundId, this.match.playerT2P2RoundId);

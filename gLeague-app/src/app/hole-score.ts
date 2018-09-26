@@ -3,6 +3,7 @@ import { HOLES } from "./mock-holes";
 export class HoleScore {
     roundid: number;
     holeid: number;
+    hdcp: number;
     playerid: number;
     strokes: number;
     putts: number;

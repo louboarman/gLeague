@@ -19,14 +19,14 @@
   <div style="float:left;width: 70px;text-align:center" id="T1P1">{{round.matchhdcp}}</div><div style="float:left;width: 90px;text-align:center">{{round.playername}}</div>
 </div>
 <div *ngFor="let holescore of holescores | filterBy: roundFilterT1P1">
-  <div style="float:left; width: 70px;text-align:center">{{holescore.strokes}}</div>
+  <div style="float:left; width: 70px;text-align:center" class="{{holescore.hdcp | strokeadvantage:player1T1Advantage : player1T2Advantage }}">{{holescore.strokes}}</div>
 </div>
 <br />
 <div *ngFor="let round of rounds | filterBy: playerFilterT2P1">
   <div style="float:left;width: 70px;text-align:center" id="T2P1">{{round.matchhdcp}}</div><div style="float:left;width: 90px;text-align:center">{{round.playername}}</div>
 </div>
 <div *ngFor="let holescore of holescores | filterBy: roundFilterT2P1">
-  <div style="float:left; width: 70px;text-align:center">{{holescore.strokes}}</div>
+  <div style="float:left; width: 70px;text-align:center" class="{{holescore.hdcp | strokeadvantage:player1T2Advantage : player1T1Advantage }}">{{holescore.strokes}}</div>
 </div>
 <br />
 <br />
@@ -34,12 +34,12 @@
   <div style="float:left;width: 70px;text-align:center" id="T2P1">{{round.matchhdcp}}</div><div style="float:left;width: 90px;text-align:center">{{round.playername}}</div>
 </div>
 <div *ngFor="let holescore of holescores | filterBy: roundFilterT1P2">
-  <div style="float:left; width: 70px;text-align:center">{{holescore.strokes}}</div>
+  <div style="float:left; width: 70px;text-align:center" class="{{holescore.hdcp | strokeadvantage:player2T1Advantage : player2T2Advantage }}">{{holescore.strokes}}</div>
 </div>
 <br />
 <div *ngFor="let round of rounds | filterBy: playerFilterT2P2">
 <div style="float:left;width: 70px;text-align:center" id="T2P2">{{round.matchhdcp}}</div><div style="float:left;width: 90px;text-align:center">{{round.playername}}</div>
 </div>
 <div *ngFor="let holescore of holescores | filterBy: roundFilterT2P2">
-<div style="float:left; width: 70px;text-align:center">{{holescore.strokes}}</div>
+<div style="float:left; width: 70px;text-align:center" class="{{holescore.hdcp | strokeadvantage:player2T2Advantage : player2T1Advantage }}">{{holescore.strokes}}</div>
 </div>

@@ -1,5 +1,5 @@
 <!-- <input type="text" [(ngModel)]="playerFilter.id" placeholder="Type to filter by ids" value="1">
-<input type="text" [(ngModel)]="roundFilter.roundid" placeholder="Type to rounds filter by ids" value="1"> -->
+<input type="text" [(ngModel)]="roundFilter.roundid" placeholder="Type to rounds filter by ids" value="1"> 
 <br />
 <span id="player1T1Advantage">P1 Advantage: {{player1T1Advantage}}</span>
 <br />
@@ -8,49 +8,65 @@
 <span id="player1T2Advantage">P3 Advantage: {{player2T1Advantage}}</span>
 <br />
 <span id="player2T2Advantage">P4 Advantage: {{player2T2Advantage}}</span>
-<br />
+<br />-->
 
 <div class="matchcarddivheaderWide">Player</div>
-<div class="matchcarddivheaderMedium">Hdcp</div>
+<div class="matchcarddivheaderMediumCenter">Hdcp</div>
 <div *ngFor="let holescore of holescores | filterBy: roundFilterT1P1">
   <div class="matchcarddivSpace">&nbsp;</div>
   <div class="matchcarddivheader">{{holescore.holeid}}</div>
   <div class="matchcarddivSpace">&nbsp;</div>
 </div>
+<div class="matchcarddivheaderMediumCenter">Score</div>
+<div class="matchcarddivheaderMediumCenter">Net</div>
 <br />
 <div *ngFor="let round of rounds | filterBy: playerFilterT1P1">
-  <div class="matchcarddivWide">{{round.playername}}</div><div class="matchcarddivMedium">{{round.matchhdcp}}</div>
+  <div class="matchcarddivWide">{{round.playername}}</div><div class="matchcarddivMediumCenter">{{round.matchhdcp}}</div>
 </div>
 <div *ngFor="let holescore of holescores | filterBy: roundFilterT1P1">
   <div class="matchcarddivSpace">&nbsp;</div>
-  <div class="matchcarddiv {{holescore.hdcp | strokeadvantage:player1T1Advantage : player1T2Advantage }}">{{holescore.strokes}}</div>
+  <div class="{{holescore.holewon | holewon}} matchcarddiv {{holescore.hdcp | strokeadvantage:player1T1Advantage : player1T2Advantage}} ">{{holescore.strokes}}</div>
   <div class="matchcarddivSpace">&nbsp;</div>
 </div>
+<div *ngFor="let round of rounds | filterBy: playerFilterT1P1">
+  <div class="matchcarddivMediumCenter">{{round.score}}</div><div class="matchcarddivMediumCenter">{{round.netscore}}</div>
+</div>
+<br />
 <br />
 <div *ngFor="let round of rounds | filterBy: playerFilterT2P1">
-  <div class="matchcarddivWide">{{round.playername}}</div><div class="matchcarddivMedium">{{round.matchhdcp}}</div>
+  <div class="matchcarddivWide">{{round.playername}}</div><div class="matchcarddivMediumCenter">{{round.matchhdcp}}</div>
 </div>
 <div *ngFor="let holescore of holescores | filterBy: roundFilterT2P1">
   <div class="matchcarddivSpace">&nbsp;</div>
-  <div class="matchcarddiv {{holescore.hdcp | strokeadvantage:player1T2Advantage : player1T1Advantage }}">{{holescore.strokes}}</div>
+  <div class=" {{holescore.holewon | holewon}} matchcarddiv {{holescore.hdcp | strokeadvantage:player1T2Advantage : player1T1Advantage }}">{{holescore.strokes}}</div>
   <div class="matchcarddivSpace">&nbsp;</div>
+</div>
+<div *ngFor="let round of rounds | filterBy: playerFilterT2P1">
+  <div class="matchcarddivMediumCenter">{{round.score}}</div><div class="matchcarddivMediumCenter">{{round.netscore}}</div>
 </div>
 <br />
 <br />
 <div *ngFor="let round of rounds | filterBy: playerFilterT1P2">
-  <div class="matchcarddivWide">{{round.playername}}</div><div  class="matchcarddivMedium">{{round.matchhdcp}}</div>
+  <div class="matchcarddivWide">{{round.playername}}</div><div  class="matchcarddivMediumCenter">{{round.matchhdcp}}</div>
 </div>
 <div *ngFor="let holescore of holescores | filterBy: roundFilterT1P2">
   <div class="matchcarddivSpace">&nbsp;</div>
-  <div class="matchcarddiv {{holescore.hdcp | strokeadvantage:player2T1Advantage : player2T2Advantage }}">{{holescore.strokes}}</div>
+  <div class="matchcarddiv {{holescore.hdcp | strokeadvantage:player2T1Advantage : player2T2Advantage }} {{holescore.holewon | holewon}}">{{holescore.strokes}}</div>
   <div class="matchcarddivSpace">&nbsp;</div>
 </div>
+<div *ngFor="let round of rounds | filterBy: playerFilterT1P2">
+  <div class="matchcarddivMediumCenter">{{round.score}}</div><div class="matchcarddivMediumCenter">{{round.netscore}}</div>
+</div>
+<br />
 <br />
 <div *ngFor="let round of rounds | filterBy: playerFilterT2P2">
-  <div class="matchcarddivWide">{{round.playername}}</div><div  class="matchcarddivMedium">{{round.matchhdcp}}</div>
+  <div class="matchcarddivWide">{{round.playername}}</div><div  class="matchcarddivMediumCenter">{{round.matchhdcp}}</div>
 </div>
 <div *ngFor="let holescore of holescores | filterBy: roundFilterT2P2">
   <div class="matchcarddivSpace">&nbsp;</div>
-  <div class="matchcarddiv {{holescore.hdcp | strokeadvantage:player2T2Advantage : player2T1Advantage }}">{{holescore.strokes}}</div>
+  <div class="matchcarddiv {{holescore.hdcp | strokeadvantage:player2T2Advantage : player2T1Advantage }} {{holescore.holewon | holewon}}">{{holescore.strokes}}</div>
   <div class="matchcarddivSpace">&nbsp;</div>
+</div>
+<div *ngFor="let round of rounds | filterBy: playerFilterT2P2">
+  <div class="matchcarddivMediumCenter">{{round.score}}</div><div class="matchcarddivMediumCenter">{{round.netscore}}</div>
 </div>

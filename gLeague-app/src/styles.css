@@ -6,13 +6,21 @@ table th {background-color: green; font-weight:bold; color:#fff; font-size: 120%
 
 table tr td:nth-child(n+2):nth-child(-n+3) {font-weight:bold;}
 
-.holeAdv {background-color: lightgray}
+.holeAdv { background-color:  lightgrey; border-radius: 100%;}
+
+/* .holeWon {border-radius: 50%; width: 8px; height: 8px; padding: 12px; background: #fff;border: 1px solid red; text-align: center;} */
+
+.holeWon {background:rgb(143, 115, 170); border-radius: 0.8em; -moz-border-radius: 0.8em; -webkit-border-radius: 0.8em; color: #ffffff; display: inline-block; font-weight: bold; line-height: 1.5em; text-align: center; width: 1.4em; }
 
 .matchcarddiv {float:left;width: 30px;text-align:center;}
 
 .matchcarddivMedium {float:left;width: 60px;text-align:left;}
 
 .matchcarddivWide {float:left;width: 130px;text-align:left;}
+
+.matchcarddivMediumCenter {float:left;width: 60px;text-align:center; font-weight: bold}
+
+.matchcarddivWideCenter {float:left;width: 130px;text-align:center;}
 
 .matchcarddivSpace {float:left;width: 10px;}
 
@@ -22,7 +30,13 @@ table tr td:nth-child(n+2):nth-child(-n+3) {font-weight:bold;}
 
 .matchcarddivheaderWide {float:left;width: 130px;text-align:left; font-weight: bold}
 
+.matchcarddivheaderMediumCenter {float:left;width: 60px;text-align:center; font-weight: bold}
 
+.matchcarddivheaderWideCenter {float:left;width: 130px;text-align:center; font-weight: bold}
+
+.circle { border: 0.1em solid rgb(4, 122, 44); border-radius: 100%;} /* height: 1.5em;width: 1.5em;text-align: center;}*/
+
+/* .circle div { width: 70px; margin-top: 0.3em; font-size: 120%; font-weight: bold; color: grey;} */
 
 
 

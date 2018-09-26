@@ -7,6 +7,7 @@ export class HoleScore {
     playerid: number;
     strokes: number;
     putts: number;
+    holewon: boolean;
     // birdie: boolean;
     // par: boolean;
     // bogie: boolean;

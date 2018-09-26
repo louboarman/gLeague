@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PlayerListComponent } from './player-list/player-list.component';
 import { PlayerRoundListComponent } from './player-round-list/player-round-list.component';
+import { TestFilterComponent } from './test-filter/test-filter.component';
+import { MatchComponent } from './match/match.component';
 
 // services
 import { PlayerService } from './player.service';
@@ -17,8 +19,6 @@ import { RoundService } from './round.service';
 // pipes
 import { RolePipe } from './role.pipe';
 import { FilterPipeModule } from 'ngx-filter-pipe';
-import { TestFilterComponent } from './test-filter/test-filter.component';
-import { MatchComponent } from './match/match.component';
 import { StrokeadvantagePipe } from './strokeadvantage.pipe';
 import { HolewonPipe } from './holewon.pipe';
 

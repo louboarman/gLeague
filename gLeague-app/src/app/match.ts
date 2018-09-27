@@ -8,6 +8,8 @@ export class Match {
     playerT2P1RoundId: number;
     playerT2P2RoundId: number;
     completed: boolean;
+    teamOnePoints: number;
+    teamTwoPoints: number;
     constructor(){}
 
 }

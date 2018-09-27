@@ -70,3 +70,20 @@
 <div *ngFor="let round of rounds | filterBy: playerFilterT2P2">
   <div class="matchcarddivMediumCenter">{{round.score}}</div><div class="matchcarddivMediumCenter">{{round.netscore}}</div>
 </div>
+
+<div *ngFor="let match of matches">
+  <div class="review-details-right">
+    <div class="overall-metrics">
+      <div class="metric-boxes">
+        <div class="metric-box">
+          <div class="metric-title">Team One</div>
+          <div class="metric-number">{{match.teamOnePoints}}</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-title">Team Two</div>
+          <div class="metric-number">{{match.teamTwoPoints}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,9 @@ export class MatchService {
 
   constructor(private http: HttpClient) { }
   
+  getMatches(){
+    return MATCHES;
+  }
   getHoleScoresForRound(){
     return MATCHES; 
   }

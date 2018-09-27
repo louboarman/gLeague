@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { RoundService } from '../round.service';
 import { HoleScoreService } from '../hole-score.service';
+import { MatchService } from '../match.service';
 import { FilterPipe } from 'ngx-filter-pipe';
 import { Match } from '../match';
 import { HoleService } from '../hole.service';
@@ -14,13 +15,14 @@ import { HoleService } from '../hole.service';
 export class MatchComponent {
   rounds: any[];
   holescores: any[];
+  matches: any[];
   player1T1Advantage:number;
   player1T2Advantage:number;
   player2T1Advantage:number;
   player2T2Advantage:number;
 
 
-  match: Match = {id:1, teamOne: 1, teamTwo: 2, playerT1P1RoundId:11, playerT1P2RoundId:31, playerT2P1RoundId:51,playerT2P2RoundId:71, dateplayed: new Date('4-30-2018'), completed:true};
+  match: Match = {id:1, teamOne: 1, teamTwo: 2, playerT1P1RoundId:11, playerT1P2RoundId:31, playerT2P1RoundId:51,playerT2P2RoundId:71, dateplayed: new Date('4-30-2018'), completed:true, teamOnePoints: 10, teamTwoPoints: 8};
   
   playerFilterT1P1: any = { id: this.match.playerT1P1RoundId };
   roundFilterT1P1: any = { roundid: this.match.playerT1P1RoundId };
@@ -34,9 +36,10 @@ export class MatchComponent {
   playerFilterT2P2: any = { id: this.match.playerT2P2RoundId };
   roundFilterT2P2: any = { roundid: this.match.playerT2P2RoundId };
 
-  constructor(RoundSvc: RoundService, HoleScoreSvc: HoleScoreService, private filterPipe: FilterPipe) { 
+  constructor(RoundSvc: RoundService, HoleScoreSvc: HoleScoreService, MatchSvc: MatchService, private filterPipe: FilterPipe) { 
     this.rounds =RoundSvc.getRounds();
     this.holescores = HoleScoreSvc.getHoleScoresForRound();
+    this.matches = MatchSvc.getMatches();
     this.player1T1Advantage = RoundSvc.getPlayerAdvantageForMatch(this.match.playerT1P1RoundId, this.match.playerT2P1RoundId);
     this.player1T2Advantage = RoundSvc.getPlayerAdvantageForMatch(this.match.playerT2P1RoundId, this.match.playerT1P1RoundId);
     this.player2T1Advantage = RoundSvc.getPlayerAdvantageForMatch(this.match.playerT1P2RoundId, this.match.playerT2P2RoundId);
